@@ -24,6 +24,10 @@ p {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 img , svg {
     display: block;
     max-width: 100%;
@@ -50,6 +54,10 @@ img , svg {
 .header {
     border-bottom: 1px solid var(--border-bottom);
     background: var(--white-colour);
+    
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 .header-container {
     display: flex;
@@ -74,7 +82,6 @@ img , svg {
     
     padding: 0;
     margin: 0;
-   
 }
 .header-nav-link{
     color: var(--navyblue-colour);
@@ -84,11 +91,30 @@ img , svg {
     display: inline-block;
     padding: 24px 0;
 
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-nav-link:hover,
 .header-nav-link:focus {
     color: var(--ocean-colour);
 }
+
+.current {
+    position: relative;
+    color: #404bbf;
+}
+
+.current::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #404bbf;
+
+    bottom: -1px;
+    position: absolute;
+}
+
 /*Logo*/
 .header-logo {
     margin-right: 76px;
@@ -127,6 +153,8 @@ img , svg {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--slate-colour);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-link:hover,
 .address-link:focus {
@@ -136,7 +164,18 @@ img , svg {
 /*Hero*/
 .hero {
     background: var(--navyblue-colour);
-    padding: 188px 0
+    padding: 188px 0;
+
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: var(--text-color);
+    background-image: linear-gradient( rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .hero-title {
     color: var(--white-colour);
@@ -168,6 +207,8 @@ img , svg {
     display: flex;
     gap: 24px;
     padding: 120px 0;
+    flex-basis: calc((100% - 72px) / 4);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .section-title {
@@ -181,10 +222,20 @@ img , svg {
     margin-bottom: 72px;
 }
 
-/*Advantages*/
-.advantages {
-    flex-basis: calc((100% - 72px) / 4);
-    border-radius: 0px 0px 4px 4px;
+
+.div-icons-advantages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 264px;
+    height: 112px;
+
+    margin-bottom: 8px;
+
+    background-color: var(--cloud-colour);
+    border-radius: 4px;
+
 }
 .visually-hidden {
     position: absolute;
@@ -276,10 +327,13 @@ img , svg {
     width: calc((100% - 72px) / 4);
     background-color: #FFFFFF;
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+
 }
 .team-name{
     padding: 32px 0;
-    
 }
 .team-subtitle {
     font-weight: 500;
@@ -292,6 +346,41 @@ img , svg {
 }
 .team-text{
     text-align: center;
+    margin-bottom: 8px;
+}
+
+.about-team-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.about-team-item {
+  width: 40px;
+  height: 40px;
+}
+.about-team-link {
+  background-color: var(--iris-colour);
+  border-radius: 50%;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  height: 100%;
+
+    display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-team-link:hover,
+.about-team-link:focus {
+  background-color: var(--ocean-colour)
+}
+.icons-our-team {
+    fill: var(--light-backgroung);
 }
 
 .team-img {}
