@@ -554,7 +554,7 @@ img , svg {
     letter-spacing: 0.54px;
     text-transform: uppercase;
 }
-.footer-text {
+.footer-first-text {
     color: var(--cloud-colour);
     font-family: Roboto;
     font-size: 16px;
