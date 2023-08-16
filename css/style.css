@@ -111,7 +111,7 @@ img , svg {
     width: 100%;
     height: 4px;
     border-radius: 2px;
-    background-color: #404bbf;
+    background-color:var(--ocean-colour);
 
     bottom: -1px;
     position: absolute;
