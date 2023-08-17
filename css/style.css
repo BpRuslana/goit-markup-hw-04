@@ -5,10 +5,10 @@
     --white-colour:  #FFFFFF;
     --cloud-colour:  #F4F4FD;
     --ocean-colour:  #404BBF;
-    --border-bottom: #E7E9FC
+    --border-bottom: #E7E9FC;
     --icons-color: #8E8F99;
     --icons-bg-color: hsl(166, 63%, 50%);
-    --fill: #F4F4Fd  
+    --fill: #F4F4Fd;
 
 }
 /* Base styles */
@@ -445,24 +445,21 @@ img , svg {
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.icons-customers {
-    fill: currentColor;
-}
   
 .customers-link:hover,
 .customers-link:focus {
     border-color: var(--ocean-colour);
     color: var(--ocean-colour);
 }
-  
-.customers-link:hover,
-.customers-link:focus {
-    color: var(--ocean-colour);
+
+.icons-customers {
+    fill: currentColor;
 }
 
-
 /*Button*/
+.button{
+    color: var(--white-colour);
+}
 
 .button-primery {
     color: var(--iris-colour);
@@ -478,17 +475,17 @@ img , svg {
     border-radius: 4px;
     border: 1px solid var(--border-bottom);
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .button-primery:hover,
 .button-primery:focus {
     color: var(--white-colour);
     background-color: var(--ocean-colour);
-    border: 1px solid transparent;
+    border-color: transparent;
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
     0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
@@ -514,7 +511,6 @@ img , svg {
     padding: 32px 16px;
     border: 1px solid var(--border-bottom);
     border-top: none;
-    margin-bottom: 8px;
 }
 
 .portfolio-link {
