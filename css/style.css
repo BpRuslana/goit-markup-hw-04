@@ -649,7 +649,7 @@ img , svg {
     align-items: center;
     justify-content: center;
 
-    background-color: var(--ocean-colour);
+    background-color: var(--iris-colour);
     border-radius: 50%;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 100%;
@@ -663,7 +663,7 @@ img , svg {
 }
 
 .footer-second-icon {
-  fill: var(--ocean-colour);
+  fill: #f4f4fd;
 }
 
 
